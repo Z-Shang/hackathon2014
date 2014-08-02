@@ -1,0 +1,82 @@
+basic classes design:
+
+Register(info)	（挂号类）
+{
+	//属性
+	date
+	hospital
+	dept
+
+	done
+	ident
+
+	//方法
+	setIdent(ident)
+}
+
+Check(info)		（检查类）
+{
+	//属性
+	date
+	hospital
+	dept
+
+	ident
+	shortIdent
+
+	reportNum
+
+	done
+
+	//方法
+	setRptNum(rptnum)
+}
+
+
+Recipe(info)		（处方类）
+{
+	date
+	hospital
+	dept
+
+	ident
+	shortIdent
+
+	reportNum
+}
+
+
+MedicalProc(info)	（治疗）
+{
+	//属性
+
+	ItemArray		//项目的数列	
+	IDENT 			//挂号的ident
+
+	state			//un-started: -1
+					//in process: 0
+					//finished: 1
+
+	//方法
+	addRegIdent(info)
+	addCheck(info)
+	addRptNum(info)
+	addRecipe(info)
+}
+
+HealthCheck(info)	（体检）
+{
+	
+	//属性
+
+	ItemArray		//项目的数列	
+	IDENT 			//挂号的ident
+
+	state			//un-started: -1
+					//in process: 0
+					//finished: 1
+
+	//方法
+	addRegIdent(info)
+	addRecipe(info)
+}

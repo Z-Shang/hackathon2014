@@ -1,0 +1,28 @@
+QR Code format
+
+{
+	date:
+	hospital:
+
+	//regular dept:	start from 1
+	//healthcheck:	0
+	dept:
+
+	//MEDICALPROC:	ident of a register should be short while check and recipe have longer idents
+	//HEALTHCHECK:	ident of a register and a recipe(report) should be the same
+	//short ident:	length should be 10 (index 0 to 9)
+	ident:
+
+	//MEDICALPROC:	to identify register/check/recipe
+	//HEALTHCHECK:	to identify register/recipe(report)
+	kind:
+
+	//MEDICALPROC:	to identify different types of checks
+	checktype:
+
+	//MEDICALPROC:	check is pending/check is reported
+	checkstate:
+
+	//ident of a recipe(report)
+	reportnum:
+}
