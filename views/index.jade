@@ -4,7 +4,7 @@ block content
   h1= title
   p Welcome to #{title}
   html.
-  <form name="input" action="/" method="get"> Query:  <input type="text" name="query" />
+  <form name="input" action="/" method="get"> Query: <input type="text" name="query" />
   <input type="submit" value="Submit" />
   </form>
   <form name="input" action="/" method="get"> Add:  <input type="text" name="add_name" /> <input type="text" name="add_value" />
@@ -12,4 +12,8 @@ block content
   </form>
   <form name="input" action="/" method="get"> Delete:  <input type="text" name="del_name" />
   <input type="submit" value="delete" />
+  </form>
+  <form name="input" action="/" method="get"> Update: <input type="text" name="update_name" />
+  <input type="text" name="value" />
+  <input type="submit" value="Update" />
   </form>
