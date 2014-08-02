@@ -1,0 +1,8 @@
+var Db = require("./db");
+
+var DB = new Db.Db();
+
+DB.addEntry(Db.dbEntry("1", "A"));
+DB.addEntry(Db.dbEntry("2", "B"));
+
+console.log(DB);
