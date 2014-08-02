@@ -41,21 +41,21 @@ exports.Db = function (){
 		}
 	}
 
-	this.dumpDB = function(){
-		fs.writeFile('db.json', this.db, function(err) {
+	this.dumpDB = function(fileName){
+		fs.writeFile(fileName, this.db, function(err) {
 			if(err){
 				throw(err);
 			}
 			console.log("Done.");
-		}
+		});
 	}
 }
 
-exports.readFromFile(fileName){
+exports.readFromFile = function (fileName){
 	fs.readFile(fileName, function(err, data){
 		if(err){
 			throw(err);
 		}
 		return data;
-	}
+	});
 }
