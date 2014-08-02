@@ -52,10 +52,12 @@ exports.Db = function (){
 }
 
 exports.readFromFile = function (fileName){
+	var tmp = new Db();
 	fs.readFile(fileName, function(err, data){
 		if(err){
 			throw(err);
 		}
-		return data;
+		tmp.db = data;
+		return tmp;
 	});
 }
