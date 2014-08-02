@@ -1,5 +1,6 @@
-var _ = require("../node_modules/underscore/underscore");
+var _ = require("underscore");
 var basic = require("./basicClass");
+var qr = require("./qr");
 
 exports.dbEntry = function (name, value){
 	this.name = name;

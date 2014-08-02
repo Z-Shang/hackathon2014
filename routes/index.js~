@@ -18,7 +18,7 @@ router.get('/', function(req, res) {
 		res.redirect("/query/delete/" + req.query.del_name);
 	}else if(_.contains(_.keys(req.query), 'update_name') && _.contains(_.keys(req.query), 'value')){ 
 		res.redirect("/query/update/" + req.query.update_name + "/" + JSON.stringify(req.query.value));
-	}else if(_.contains(_.keys(req.query), 'qr') && _.contains(_.keys(req.query), 'qr_name')){
+	}else if(_.contains(_.keys(req.query), 'qr') && _.contains.(_.keys(req.query), 'qr_name')){
 		tmp = new qr.QR(req.query.qr);
 		res.redirect("/query/add/" + req.query.qr_name + "/" + JSON.stringify(tmp));
 	}else{

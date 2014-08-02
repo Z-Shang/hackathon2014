@@ -24,13 +24,13 @@ function makeDate(){
 }
 
 
-exports.QR = function(id){
+exports.QR = function(){
 	//Type: Diagnosis, Examination, DResult, EResult
 	this.dia = new diagnosis();
 	this.exm = new examination();
 	this.date = makeDate();
 	this.hospital = '';	
-	this.ident = id;
+	this.ident = '';
 	this.dReport = new report('Diagnosis');
 	this.eReport = new report('Examination');
 	this.done = false;

@@ -33,7 +33,7 @@ router.get('/delete/:name', function(req, res) {
 router.get('/update/:name/:value', function(req, res) {
 	var name = req.params.name;
 	var value = req.params.value;
-	res.send(db.updateEntry(new DB.dbEntry(name, JSON.parse(value))));
+	res.send(db.updateEntry(new DB.dbEntry(name, value)));
 });
 
 module.exports = router;
