@@ -8,6 +8,7 @@ db = new DB.Db();
 
 db.addEntry(new DB.dbEntry("A", "1"));
 db.addEntry(new DB.dbEntry("B", "2"));
+db.addEntry(new DB.dbEntry("C", "3"));
 
 router.get('/', function(req, res) {
 	res.send(db.db);
