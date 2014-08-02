@@ -1,4 +1,5 @@
 var _ = require("../node_modules/underscore/underscore");
+var basic = require("./basicClass");
 
 exports.dbEntry = function (name, value){
 	this.name = name;
@@ -38,5 +39,23 @@ exports.Db = function (){
 			this.db[entry.name] = entry;
 			return true;
 		}
+	}
+
+	this.dumpDB = function(){
+		fs.writeFile('db.json', this.db, function(err) {
+			if(err){
+				throw(err);
+			}
+			console.log("Done.");
+		}
+	}
+}
+
+exports.readFromFile(fileName){
+	fs.readFile(fileName, function(err, data){
+		if(err){
+			throw(err);
+		}
+		return data;
 	}
 }
